@@ -22,4 +22,14 @@ about:
     path: /about
     controller: App\Controller\LuckyControllerTwig::about
 
+me:
+    path: /
+    controller: App\Controller\LuckyControllerTwig::me
 
+api_quote:
+    path: '/api/quote'
+    controller: App\Controller\LuckyControllerTwig::quote
+
+report:
+    path: /report
+    controller: App\Controller\LuckyControllerTwig::report

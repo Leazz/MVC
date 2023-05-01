@@ -1,7 +1,22 @@
+{% extends "base.html.twig" %}
 {% block body %}
     <h1>About</h1>
     <p>An image which can be clicked on.</p>
     <a href="{{ asset('img/glider.svg') }}">
         <img src="{{ asset('img/glider.svg') }}" alt="">
     </a>
+    <div class="row">
+        <div class="col">
+            <h1>About MVC course</h1>
+            <p> Throughout this course, we gained knowledge on developing web applications using an object-oriented methodology, with a primary focus on the MVC (Model-View-Controller) architectural pattern. Our journey began by establishing a strong foundation, and we chose Symfony, one of the most prominent PHP frameworks, to get started.
+            Our first step was to install Symfony and create a website using a controller (representing the "C" in MVC), which provided the groundwork for our individual course pages. These pages consisted of essential information about ourselves, the course, and our projects. We utilized views to present web pages (the "V" in MVC) and also tried our hand at generating a page using JSON, which gave us a glimpse of how to construct a web service with a RESTful API.
+            Moreover, we delved into the fundamentals of object-oriented programming and learned about its constructs in PHP.</p>
+
+            <p>You can find the Git-repo for this course <a href="https://github.com/dbwebb-se/mvc/tree/main/example/symfony">here</a>.</p>
+        </div>
+        <div class="col">
+            <h1>My GitHub Repo</h1>
+            <p>You can find my GitHub repo <a href="https://github.com/Leazz/mvc">here</a>.</p>
+        </div>
+    </div>
 {% endblock %}

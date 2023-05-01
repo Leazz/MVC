@@ -22,9 +22,19 @@
             <ul>
                 <li><a href="{{ path('home') }}">Home</a></li>
                 <li><a href="{{ path('about') }}">About</a></li>
+                <li><a href="{{ path('me') }}">Me</a></li>
+                <li><a href="{{ path('report') }}">Report</a></li>
+                <a href="/report#kmom01">Kmom01 report</a>
                 <li><a href="{{ path('lucky_number') }}">Lucky number</a></li>
             </ul>
         </nav>
+        </header>
+        <main>
         {% block body %}{% endblock %}
+        </main>
+        <footer>
+            <p>&copy; 2023 My Symfony Site</p>
+            <p>Made with <span class="heart">&#x2764;</span> by Lea Alfawaz</p>
+        </footer>
     </body>
 </html>
