@@ -27,7 +27,7 @@ me:
     controller: App\Controller\LuckyControllerTwig::me
 
 api_quote:
-    path: '/api/quote'
+    path: /api/quote
     controller: App\Controller\LuckyControllerTwig::quote
 
 report:
