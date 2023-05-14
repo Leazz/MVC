@@ -3,6 +3,6 @@
 {% block body %}
     <h1>Presentation</h1>
     <p>Hello, my name is {{ name }} and this is a picture:</p>
-    <img src="{{ asset('images/' ~ image) }}" alt="{{ name }}">
+    <img class="me" src="{{ asset('img/me.jpg') }}" alt="{{ name }}">
     <p>{{ description }}</p>
 {% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}🃏 Draw several cards 🃏{% endblock %}
+
+{% block body %}
+    <h1>Play a card game and draw multiple cards from the deck.</h1>
+
+<p>The {{ cards|length }} cards that have been selected from the deck:</p>
+<ul>
+    <div class="card-container">
+        {% for card in cards %}
+            <div class="card">{{ card.value|capitalize }}{{ card.suit }}</div>
+            {% endfor %}
+    </div>
+</ul>
+    <p>The remaining number of cards in the deck is {{ numCards }}</p>
+{% endblock %}

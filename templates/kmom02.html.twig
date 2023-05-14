@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+{% block body %}
+    <div class="row">
+        <div class="col">
+            <h1>Kmom02</h1>
+            <p>During this course, I developed the basics of a card game for our website to improve my skills in object-oriented programming and creating custom classes and applications using Symfony framework. I utilized various object-oriented constructs to create a group of classes that work in tandem. This involved designing PHP classes with methods and member variables. In addition, I experimented with both inheritance and composition to understand the distinctions and similarities between these constructs. I also integrated more advanced constructs, such as interfaces and traits, which was an added bonus.</p>
+            <p>There are four constructs that help with code reuse and modularity: inheritance, composition, interface, and trait.
+            Inheritance: A child class can inherit properties and behavior from a parent class.
+            Composition: An object is made up of one or more other objects, each providing a specific functionality.
+            Interface: A set of methods that a class must implement.
+            Trait: A set of methods that can be reused in multiple classes.
+            These constructs can be combined in different ways to achieve different design goals.</p>
+            <p>The implementation of a card game started with the creation of three classes: Card, CardsSet, and DeckOfCards. The Card class represents a single playing card, and the CardsSet class represents a set of playing cards. The DeckOfCards class represents a deck of playing cards and has a composition relationship with the Card and CardsSet classes. The DeckOfCards class has methods to initialize the deck, shuffle and sort the cards, draw a card, and reset the deck. The CardsSet class has methods to add and get cards and their values. The Card class has properties for the suit and value of the card and methods to retrieve them.</p>
+            <p>This course presented many challenges for me. It took a while to fully comprehend how to apply the concepts, and even simple mistakes would completely halt the website's functionality. However, the benefit was that the site would inform me of the errors, which helped speed up the process of identifying and correcting them. Through research and careful consideration, I believe that I have achieved a satisfactory outcome.</p>
+            <p>"I have learned to program using object-oriented constructions to build multiple classes that collaborate with each other."</p>
+        </div>
+    </div>
+{% endblock %}

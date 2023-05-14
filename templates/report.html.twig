@@ -4,10 +4,36 @@
         <div class="col">
             <h1>Redovesning</h1>
 
+            <ul class="report">
+                <li><a class="button " href="{{ path('report') }}#kmom01">kmom01</a></li>
+                <li><a class="button " href="{{ path('report') }}#kmom02">kmom02</a></li>
+            </ul>
+
             <h1>Kmom01</h1>
+            <div id="kmom01">
+           <p>I haven't had much experience with object-oriented programming, but I recently completed a course in Object-Oriented Python that covered Algorithms and Data Structures. It was a challenging and exciting experience that taught me the basics of object-oriented programming in Python.
+            After exploring PHP's model for classes and objects, I noticed some similarities with Python's approach. PHP classes are also defined using the "class" keyword. Like Python, variables within a class are called properties, and functions are referred to as methods.</p>
+            <p>PHP uses object-oriented programming (OOP) to organize code into objects that consist of both data (variables) and functions (methods). To get started with creating classes in PHP, one needs to understand the following basic terms and concepts: 
+            classes, object, properties, Methods, Constructor and access Levels. By understanding these basic terms and concepts, one can easily get started with creating their first classes and objects in PHP.</p>
+            <p>I faced several difficulties while working with the symfony framework, especially with getting my routers to function correctly, which required a considerable amount of time to resolve.</p>
+            <p>I noticed that there are many new things that I got through this course, and I think that I will acquire many interesting things in the upcoming courses, and this is an excellent thing for me because I can develop myself more and more.</p>
             <p> I learned how to program web applications in an object-oriented way with a focus on the architectural design pattern MVC in this course. To get started, I needed a foundation, and we chose the Symfony framework, which is one of the most well-known frameworks in PHP. 
             I started by installing Symfony and building a website with a controller (the C in MVC) that gave us the foundation for the course's me-page, which was supposed to contain details about me, the course, and my presentation texts. I used views to render the web pages (the V in MVC). I also tried to create a page generated with JSON, which was an embryo for learning how to build a web service with a RESTful API.
             also began to learn the basics of object-oriented programming and its structures in PHP.</p>
+        </div>
+        <div class="col">
+            <h1>Kmom02</h1>
+            <div id="kmom02">
+            <p>During this course, I developed the basics of a card game for our website to improve my skills in object-oriented programming and creating custom classes and applications using Symfony framework. I utilized various object-oriented constructs to create a group of classes that work in tandem. This involved designing PHP classes with methods and member variables. In addition, I experimented with both inheritance and composition to understand the distinctions and similarities between these constructs. I also integrated more advanced constructs, such as interfaces and traits, which was an added bonus.</p>
+            <p>There are four constructs that help with code reuse and modularity: inheritance, composition, interface, and trait.
+            Inheritance: A child class can inherit properties and behavior from a parent class.
+            Composition: An object is made up of one or more other objects, each providing a specific functionality.
+            Interface: A set of methods that a class must implement.
+            Trait: A set of methods that can be reused in multiple classes.
+            These constructs can be combined in different ways to achieve different design goals.</p>
+            <p>The implementation of a card game started with the creation of three classes: Card, CardsSet, and DeckOfCards. The Card class represents a single playing card, and the CardsSet class represents a set of playing cards. The DeckOfCards class represents a deck of playing cards and has a composition relationship with the Card and CardsSet classes. The DeckOfCards class has methods to initialize the deck, shuffle and sort the cards, draw a card, and reset the deck. The CardsSet class has methods to add and get cards and their values. The Card class has properties for the suit and value of the card and methods to retrieve them.</p>
+            <p>This course presented many challenges for me. It took a while to fully comprehend how to apply the concepts, and even simple mistakes would completely halt the website's functionality. However, the benefit was that the site would inform me of the errors, which helped speed up the process of identifying and correcting them. Through research and careful consideration, I believe that I have achieved a satisfactory outcome.</p>
+            <p>"I have learned to program using object-oriented constructions to build multiple classes that collaborate with each other."</p>
         </div>
     </div>
 {% endblock %}

@@ -24,7 +24,7 @@ class LuckyControllerJson
 
         // return $response;
         // return new JsonResponse($data);
-                // return new JsonResponse($data);
+        // return new JsonResponse($data);
 
         $response = new JsonResponse($data);
         $response->setEncodingOptions(

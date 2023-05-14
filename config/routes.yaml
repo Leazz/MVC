@@ -27,9 +27,55 @@ me:
     controller: App\Controller\LuckyControllerTwig::me
 
 api_quote:
-    path: '/api/quote'
+    path: /api/quote
     controller: App\Controller\LuckyControllerTwig::quote
 
 report:
     path: /report
     controller: App\Controller\LuckyControllerTwig::report
+
+card_init:
+  path: '/card/init/{route}'
+  controller: 'App\Controller\cardsController::init'
+
+card:
+  path: '/card'
+  controller: 'App\Controller\cardsController::card'
+
+deck:
+  path: '/card/deck'
+  controller: 'App\Controller\cardsController::deck'
+
+deck_shuffle:
+  path: '/card/deck/shuffle'
+  controller: 'App\Controller\cardsController::deck_shuffle'
+
+deck_draw:
+  path: '/card/deck/draw'
+  controller: 'App\Controller\cardsController::deck_draw'
+
+deck_draw_num:
+  path: '/card/deck/draw/{number<\d+>}'
+  controller: 'App\Controller\cardsController::deck_draw_num'
+
+api:
+    path: /api
+    controller: App\Controller\ApiController::api
+
+deck_api:
+    path: /api/deck
+    controller: App\Controller\ApiController::apiDeck
+
+deck_shuffle_api:
+    path: /api/deck/shuffle
+    controller: App\Controller\ApiController::apiShuffle
+
+deck_draw_api:
+  path: '/api/deck/draw'
+  controller: App\Controller\ApiController::apiDraw
+
+deck_draw_num_api:
+    path: /api/deck/draw/{number<\d+>}
+    controller: App\Controller\ApiController::apiDrawNum
+
+

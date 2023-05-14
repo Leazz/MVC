@@ -1,0 +1,50 @@
+{% extends "base.html.twig" %}
+
+{% block title %}API{% endblock %}
+
+{% block body %}
+    <h1>API</h1>
+    <p>The following is a complete summary of the JSON routes that can be accessed on this site.</p>
+
+    <div>
+        <h2>Quote of the day</h2>
+        <p>
+            Route to view a JSON object with today's quote
+        </p>
+        <li><a href="{{ path('api_quote') }}">Quote</a></li>
+    </div>
+
+    <div>
+        <h2>Sorted deck</h2>
+        <p>
+            This route leads to a page that shows a JSON object containing a sorted list of all cards in the deck, arranged by suit and value.
+        </p>
+        <li><a href="{{ path('deck_api') }}">API Deck</a></li>
+    </div>
+
+    <div>
+        <h2>shuffled cards</h2>
+        <p>
+            This route leads you to a web page that shows a JSON object containing all the cards from a shuffled deck.
+        </p>
+        <li><a href="{{ path('deck_shuffle_api') }}">Shuffle deck API</a></li>
+    </div>
+
+    <div>
+        <h2>Draw card</h2>
+        <p>
+            This route takes you to a page that displays a JSON object with a random card from the deck.
+        </p>
+        <li><a href="{{ path('deck_draw_api') }}">Draw API</a></li>
+    </div>
+
+    <div>
+        <h2>Draw multiple cards</h2>
+        <p>
+            This route displays a JSON object containing 4 randomly drawn cards from the deck, 
+        </p>
+        <li><a href="{{ path('deck_draw_num_api', {number:4}) }}'">Draw multiple card API</a></li>
+    </div>
+
+    
+{% endblock %}
