@@ -16,7 +16,7 @@ class DeckOfCards
         $this->cards = [];
 
         $suits = ['♥', '♦', '♣', '♠'];
-        $values = ['A', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'K', 'Q'];
+        $values = ['A', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'K', 'J', 'Q'];
 
         foreach ($suits as $suit) {
             foreach ($values as $value) {
@@ -43,7 +43,7 @@ class DeckOfCards
             $suitSet = ['♥', '♦', '♣', '♠'];
             $suitDiff = array_search($a->getTheSuit(), $suitSet) - array_search($b->getTheSuit(), $suitSet);
             if ($suitDiff === 0) {
-                $valueSet = ['A', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K'];
+                $valueSet = ['A', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'Q', 'J', 'K'];
                 return array_search($a->getTheValue(), $valueSet) - array_search($b->getTheValue(), $valueSet);
             }
             return $suitDiff;
