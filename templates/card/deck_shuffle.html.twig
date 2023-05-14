@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+
+{% block title %}👸🏼 Shuffle cards 👸🏼{% endblock %}
+
+{% block body %}
+<h1>Shuffling the Deck of Cards</h1>
+
+<p>🃏 Here is a shuffled deck of cards: </p>
+<ul>
+    <div class="card-container">
+        {% for card in cards %}
+            <div class="card">{{ card.getTheValue|capitalize }}{{ card.getTheSuit }}</div>
+        {% endfor %}
+    </div>
+</ul>
+
+{% endblock %}
