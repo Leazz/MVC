@@ -1,0 +1,24 @@
+{% extends "base.html.twig" %}
+
+{% block title %}🃏 Card Game 🃏{% endblock %}
+
+{% block body %}
+<h1>Card game</h1>
+<h3>Here we go:</h3>
+
+<ul>
+    <li><a href="{{ path('deck') }}">Sorted Cards</a></li>
+    <li><a href="{{ path('deck_shuffle') }}">Shuffled Cards</a></li>
+    <li><a href="{{ path('deck_draw') }}">Draw cards</a></li>
+    <li><a href="{{ path('deck_draw_num', {number: 4}) }}">Draw multiple 4 cards</a></li>
+
+</ul>
+
+<p>Card class: This class represents a single playing card. It has two properties: suit and value, which represent the suit and value of the card, respectively. It also has two methods: getTheValue() and getTheSuit() to retrieve the value and suit of the card.</p>
+<p>CardsSet class: This class represents a set of playing cards. It has an array property called $cards, which holds an array of Card objects. It has three methods: addCard(), which adds a Card object to the array; getCard(), which returns an array of Card objects; and getCardValues(), which returns an array of card values.</p>
+<p>DeckOfCards class: This class represents a deck of playing cards. It has a property called $cards, which holds an array of Card objects. It has six methods: __construct(), draw(), shuffle(), sortedCards() numCards() and clearDeck().</p>
+<p>The DeckOfCards class has a composition relationship with the Card class, as it contains an array of Card objects. It also has a composition relationship with the CardsSet class, as it uses the CardsSet class to add and remove cards from the deck. The CardsSet class has an aggregation relationship with the Card class, as it contains an array of Card objects, but does not create them.</p>
+
+<img src="{{ asset('img/uml.png') }}" alt="uml">
+
+{% endblock %}
