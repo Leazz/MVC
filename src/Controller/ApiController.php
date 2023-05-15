@@ -4,7 +4,7 @@ namespace App\Controller;
 
 use App\Card\Card;
 use App\Card\DeckOfCards;
-use App\Card\cardsSet;
+use App\Card\CardsSet;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -85,7 +85,7 @@ class ApiController extends AbstractController
         return $response;
     }
 
-    #[Route("/api/deck/draw/{number<\d+>}", name: "deck_draw_num_api", methods:['POST'])]
+    #[Route("/api/deck/draw/{number<\d+>}", name: "deck_draw_num_api", methods:['GET'])]
     public function apiDrawNum(
         int $number,
         SessionInterface $session
@@ -94,10 +94,6 @@ class ApiController extends AbstractController
         $deck = $session->get('deck');
         $cards = $deck->shuffle();
 
-        if ($number < 1 || $number > $deck->numCards()) {
-            throw new \Exception("The number of cards to draw is invalid.");
-        }
-
         $cards = [];
         for ($i = 0; $i < $number; $i++) {
             $cards[] = array_pop($deck->cards);
@@ -105,15 +101,16 @@ class ApiController extends AbstractController
 
         $numCards = $deck->numCards();
 
+        $data = [
+            'cards' => $cards,
+            'numCards' => $numCards
+        ];
+
         $cardsSet = '';
         foreach($cards as $card) {
             $cardsSet .= "[{$card->getTheValue()}{$card->getTheSuit()}]";
         }
 
-        $data = [
-            'cards' => $cardsSet,
-            'numCards' => $numCards
-        ];
 
         $response = new JsonResponse($data);
         $response->setEncodingOptions(

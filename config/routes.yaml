@@ -36,27 +36,27 @@ report:
 
 card_init:
   path: '/card/init/{route}'
-  controller: 'App\Controller\cardsController::init'
+  controller: 'App\Controller\CardsController::init'
 
 card:
   path: '/card'
-  controller: 'App\Controller\cardsController::card'
+  controller: 'App\Controller\CardsController::card'
 
 deck:
   path: '/card/deck'
-  controller: 'App\Controller\cardsController::deck'
+  controller: 'App\Controller\CardsController::deck'
 
 deck_shuffle:
   path: '/card/deck/shuffle'
-  controller: 'App\Controller\cardsController::deck_shuffle'
+  controller: 'App\Controller\CardsController::deck_shuffle'
 
 deck_draw:
   path: '/card/deck/draw'
-  controller: 'App\Controller\cardsController::deck_draw'
+  controller: 'App\Controller\CardsController::deck_draw'
 
 deck_draw_num:
   path: '/card/deck/draw/{number<\d+>}'
-  controller: 'App\Controller\cardsController::deck_draw_num'
+  controller: 'App\Controller\CardsController::deck_draw_num'
 
 api:
     path: /api
@@ -75,7 +75,9 @@ deck_draw_api:
   controller: App\Controller\ApiController::apiDraw
 
 deck_draw_num_api:
-    path: /api/deck/draw/{number<\d+>}
+    path: '/api/deck/draw/{number<\d+>}'
     controller: App\Controller\ApiController::apiDrawNum
 
-
+deck_shuffle_jokers:
+    path: /card/deck/shuffle/jokers
+    controller: App\Controller\CardsController::deck_shuffle_jokers

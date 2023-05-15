@@ -9,6 +9,7 @@
 <ul>
     <li><a href="{{ path('deck') }}">Sorted Cards</a></li>
     <li><a href="{{ path('deck_shuffle') }}">Shuffled Cards</a></li>
+    <li><a href="{{ path('deck_shuffle_jokers') }}">Shuffled Cards with jokers</a></li>
     <li><a href="{{ path('deck_draw') }}">Draw cards</a></li>
     <li><a href="{{ path('deck_draw_num', {number: 4}) }}">Draw multiple 4 cards</a></li>
 
@@ -22,4 +23,3 @@
 <img src="{{ asset('img/uml.png') }}" alt="uml">
 
 {% endblock %}
-

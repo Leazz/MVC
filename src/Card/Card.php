@@ -22,4 +22,5 @@ class Card
     {
         return $this->suit;
     }
+
 }

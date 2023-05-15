@@ -3,13 +3,15 @@
 {% block title %} 🃏 Draw cards 🃏{% endblock %}
 
 {% block body %}
-<h1>Play the card game and draw a card.</h1>
+    <h1>Play the card game and draw a card.</h1>
 
-<ul>
-    <div class="card-container">
-            <p>The game card is 🤔 : </p> <div class="card"> {{ card.value|capitalize }}{{ card.suit }}  </div>
+    <ul>
+        <div class="card-container">
+            <p>The game card is 🤔 : </p>
+            <div class="card {% if card.getTheSuit in ['♥', '♦'] %}red{% endif %}">
+                {{ card.getTheValue|capitalize }}{{ card.getTheSuit }}
+            </div>
             <p> The quantity is 💭: {{ numCards }} </p>
-    </div>
-</ul>
-
+        </div>
+    </ul>
 {% endblock %}

@@ -4,14 +4,15 @@ namespace App\Controller;
 
 use App\Card\Card;
 use App\Card\DeckOfCards;
-use App\Card\cardsSet;
+use App\Card\DeckOfCardsJoker;
+use App\Card\CardsSet;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
-class cardsController extends AbstractController
+class CardsController extends AbstractController
 {
     #[Route("/card", name: "card")]
     public function card(
@@ -49,6 +50,21 @@ class cardsController extends AbstractController
         ];
 
         return $this->render('card/deck_shuffle.html.twig', $data);
+    }
+
+    #[Route("/card/deck/shuffle/jokers", name: "deck_shuffle/jokers")]
+    public function deck_shuffle_jokers(SessionInterface $session): Response
+    {
+        $deck = new deckOfCardsJoker();
+        $session->set('deck', $deck);
+
+        $cards = $deck->shuffle();
+
+        $data = [
+            'cards' => $cards
+        ];
+
+        return $this->render('card/deck_shuffle_jokers.html.twig', $data);
     }
 
     #[Route("/card/deck/draw", name: "deck_draw")]

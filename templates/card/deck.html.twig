@@ -5,13 +5,14 @@
 {% block body %}
 <h1>Deck of Cards Game </h1>
 
-<p>Here are the cards in the deck 👸🏻 : </p>
+<p>Here are the cards in the deck 👸🏻 :</p>
 <ul>
     <div class="card-container">
         {% for card in cards %}
-            <div class="card">{{ card.value|capitalize }}{{ card.suit }}</div>
+            <div class="card {% if card.suit in ['♥', '♦'] %}red{% endif %}">
+                {{ card.value|capitalize }}{{ card.suit }}
+            </div>
         {% endfor %}
     </div>
 </ul>
-
 {% endblock %}

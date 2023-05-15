@@ -131,3 +131,14 @@ img.me {
     width: 200px;
     height: auto;
 }
+
+.card {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.red {
+    color: red;
+}

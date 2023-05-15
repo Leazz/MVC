@@ -43,7 +43,11 @@
         <p>
             This route displays a JSON object containing 4 randomly drawn cards from the deck, 
         </p>
-        <li><a href="{{ path('deck_draw_num_api', {number:4}) }}'">Draw multiple card API</a></li>
+        <form method="post" action="{{ path('deck_draw_num_api', {number: 4}) }}">
+            <button type="submit">Draw Cards</button>
+        </form>
+     
     </div>
 
+    
 {% endblock %}

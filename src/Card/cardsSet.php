@@ -4,7 +4,7 @@ namespace App\Card;
 
 use App\Card\Card;
 
-class cardsSet
+class CardsSet
 {
     private $cards = [];
 
