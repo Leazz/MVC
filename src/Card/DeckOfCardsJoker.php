@@ -8,7 +8,7 @@ class DeckOfCardsJoker extends DeckOfCards
     public function __construct()
     {
         parent::__construct();
-        $this->jokers = [new Card('Joker', 'Joker'), new Card('Joker', 'Joker')];
+        $this->jokers = [new Card('JOK', 'JOK'), new Card('JOKER', 'JOKER')];
         $this->cards = array_merge($this->cards, $this->jokers);
     }
 
